@@ -15,3 +15,13 @@ Türkçe metinlerde yazım hatalarını tespit eden ve düzelten basit ama güç
 
 ```bash
 pip install turkyazim
+
+## kullanım
+from turkyazim import TurkceYazim
+
+denetleyici = TurkceYazim()
+sonuc = denetleyici.duzelt("Bu metin cok guzel degıl.")
+print(sonuc)
+
+CLI ile kullanım
+turkyazim "Bu metin cok guzel degıl." --duzelt
