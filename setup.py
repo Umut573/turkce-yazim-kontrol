@@ -22,7 +22,7 @@ setup(
     description="Gelişmiş Türkçe Yazım Denetleyici - Zemberek + BERT + TDK",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/kullaniciadi/turkce-yazim-kontrol", 
+    url="https://github.com/Umut573/turkce-yazim-kontrol", 
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
