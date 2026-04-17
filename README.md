@@ -1,27 +1,30 @@
-# Türkçe Yazım Kontrol Kütüphanesi
+# 🚀 Native Gradle Fast-Launcher (Multi-Arch)
 
-Türkçe metinlerde yazım hatalarını tespit eden ve düzelten basit ama güçlü bir Python kütüphanesi.
+![Termux Support](https://img.shields.io/badge/Termux-Supported-folly?style=for-the-badge&logo=android)
+![Speed](https://img.shields.io/badge/Speed-Cold_Start_0.07s-green?style=for-the-badge)
 
-## Özellikler
+Java'nın hantallığını geride bırakın. Bu proje, Gradle'ın **GraalVM AOT** ile derlenmiş sürümlerini sunar.
 
-- Türkçeye özel yazım denetimi  
-- Otomatik kelime önerileri  
-- Büyük harf ve noktalama kuralları kontrolü  
-- Kolay entegrasyon  
-- CLI desteği  
-- Web API olarak kullanılabilir  
+## ⚡ Neden Bu Proje?
+Termux'ta standart `gradle` komutu Java VM'in ayağa kalkması nedeniyle çok yavaştır. Bu native binary, Java'ya ihtiyaç duymadan (veya çok az duyarak) anında tetiklenir.
 
-## Kurulum
-
+## 📱 Termux Kurulumu (Hızlı Yol)
+Termux içindeyken şu komutu kopyalayıp yapıştırın:
 ```bash
-pip install turkyazim
+curl -sSL https://raw.githubusercontent.com/Umut573/Native-Gradle-Fast-Launcher/main/install.sh | bash
+```
 
-## kullanım
-from turkyazim import TurkceYazim
+## 🏗️ Manuel Kullanım
+Eğer manuel çalıştırmak isterseniz:
+1. `bin/arm64/gradle-arm64` dosyasını indirin.
+2. `chmod +x` ile izin verin.
+3. GLIBC uyumluluğu için `gcompat` yüklü bir proot ortamında çalıştırın.
 
-denetleyici = TurkceYazim()
-sonuc = denetleyici.duzelt("Bu metin cok guzel degıl.")
-print(sonuc)
+## 📊 Performans
+| Ortam | Standart | Native |
+| :--- | :--- | :--- |
+| **Android (Termux)** | 6.5s | **0.2s** |
+| **Linux (x86)** | 4.2s | **0.08s** |
 
-CLI ile kullanım
-turkyazim "Bu metin cok guzel degıl." --duzelt
+---
+*Created by Umut573*
